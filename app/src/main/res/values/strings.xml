@@ -1,4 +1,7 @@
 <resources>
+
+    <string name="app_name">Event Management API</string>
+
     <string-array name="status_array">
         <item>upcoming</item>
         <item>ongoing</item>

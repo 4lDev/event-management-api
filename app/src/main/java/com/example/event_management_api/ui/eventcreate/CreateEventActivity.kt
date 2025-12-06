@@ -76,10 +76,10 @@ class CreateEventActivity : AppCompatActivity() {
         val day = calendar.get(Calendar.DAY_OF_MONTH)
 
         val datePickerDialog = DatePickerDialog(this,
-                { _, selectedYear, selectedMonth, selectedDay ->
-                        val date = String.format("%d-%02d-%02d", selectedYear, selectedMonth + 1, selectedDay)
-                        editText.setText(date)
-                }, year, month, day)
+            { _, selectedYear, selectedMonth, selectedDay ->
+                val date = String.format("%d-%02d-%02d", selectedYear, selectedMonth + 1, selectedDay)
+                editText.setText(date)
+            }, year, month, day)
         datePickerDialog.show()
     }
 
@@ -89,10 +89,10 @@ class CreateEventActivity : AppCompatActivity() {
         val minute = calendar.get(Calendar.MINUTE)
 
         val timePickerDialog = TimePickerDialog(this,
-                { _, selectedHour, selectedMinute ->
-                        val time = String.format("%02d:%02d:00", selectedHour, selectedMinute)
-                        editText.setText(time)
-                }, hour, minute, true)
+            { _, selectedHour, selectedMinute ->
+                val time = String.format("%02d:%02d:00", selectedHour, selectedMinute)
+                editText.setText(time)
+            }, hour, minute, true)
         timePickerDialog.show()
     }
 
@@ -108,16 +108,16 @@ class CreateEventActivity : AppCompatActivity() {
     private fun submitEventData() {
         // Ekstraksi data form
         val newEvent = Event(
-                id = null,
-                title = etTitle.text.toString(),
-                date = etDate.text.toString(),
-                time = etTime.text.toString(),
-                location = etLocation.text.toString(),
-                description = etDescription.text.toString().ifEmpty { null },
-        capacity = etCapacity.text.toString().toIntOrNull() ?: 0,
-                status = spinnerStatus.selectedItem.toString(),
-                createdAt = null,
-                updatedAt = null
+            id = null,
+            title = etTitle.text.toString(),
+            date = etDate.text.toString(),
+            time = etTime.text.toString(),
+            location = etLocation.text.toString(),
+            description = etDescription.text.toString().ifEmpty { null },
+            capacity = etCapacity.text.toString().toIntOrNull() ?: 0,
+            status = spinnerStatus.selectedItem.toString(),
+            createdAt = null,
+            updatedAt = null
         )
 
         // Panggil Anggota A (EventManager) untuk mengirim data

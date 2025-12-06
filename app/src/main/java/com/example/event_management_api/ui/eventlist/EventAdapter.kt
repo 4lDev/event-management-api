@@ -8,6 +8,9 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.event_management_api.R
 import com.example.event_management_api.data.model.Event
+import android.content.Intent
+import android.widget.Toast
+import com.example.event_management_api.ui.eventdetail.EventDetailActivity
 
 class EventAdapter(private var eventList: List<Event>) :
     RecyclerView.Adapter<EventAdapter.EventViewHolder>() {
@@ -43,8 +46,17 @@ class EventAdapter(private var eventList: List<Event>) :
         holder.tvStatus.setTextColor(ContextCompat.getColor(holder.itemView.context, statusColorRes))
 
         // KRITIS: Tambahkan Listener untuk Use Case GET by ID (Anggota B)
+        // Di dalam onBindViewHolder (EventAdapter.kt)
         holder.itemView.setOnClickListener {
-            // Logika untuk membuka EventDetailActivity
+            // Cek apakah ID event ada sebelum mengirimnya
+            if (event.id != null) {
+                val intent = Intent(holder.itemView.context, EventDetailActivity::class.java)
+                // Kunci EXTRA_EVENT_ID harus sama persis dengan yang didefinisikan di EventDetailActivity
+                intent.putExtra(EventDetailActivity.EXTRA_EVENT_ID, event.id)
+                holder.itemView.context.startActivity(intent)
+            } else {
+                Toast.makeText(holder.itemView.context, "ID Event tidak valid.", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
