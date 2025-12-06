@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">event-management-api</string>
+    <string-array name="status_array">
+        <item>upcoming</item>
+        <item>ongoing</item>
+        <item>completed</item>
+        <item>cancelled</item>
+    </string-array>
+
 </resources>
