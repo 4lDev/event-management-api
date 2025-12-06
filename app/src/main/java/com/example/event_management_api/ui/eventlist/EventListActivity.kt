@@ -1,4 +1,4 @@
-package com.example.event_management_api
+package com.example.event_management_api.ui.eventlist
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
