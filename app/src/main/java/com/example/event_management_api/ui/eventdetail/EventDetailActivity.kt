@@ -37,7 +37,7 @@ class EventDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         // XML ini harus dibuat Anggota B di langkah berikutnya
         setContentView(R.layout.activity_event_detail)
-
+    
         initViews()
 
         // 1. Ambil ID dari Intent

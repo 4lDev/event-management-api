@@ -42,7 +42,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="24sp"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
+                    android:textColor="?android:attr/textColorPrimary"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/tvDetailStatus"
@@ -69,7 +69,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#DDDDDD"
+                android:background="?attr/colorOnSurface"
                 android:layout_marginBottom="16dp"/>
 
             <TextView
@@ -78,6 +78,7 @@
                 android:text="Informasi Utama"
                 android:textSize="18sp"
                 android:textStyle="bold"
+                android:textColor="?android:attr/textColorPrimary"
                 android:layout_marginBottom="8dp"/>
 
             <TextView
@@ -86,8 +87,10 @@
                 android:layout_height="wrap_content"
                 android:drawablePadding="8dp"
                 android:layout_marginBottom="8dp"
+                android:textColor="?android:attr/textColorPrimary"
                 tools:text="Tanggal &amp; Waktu: 2025-11-15 | 09:00:00"
-                app:drawableStartCompat="@drawable/ic_calendar" />
+                app:drawableStartCompat="@drawable/ic_calendar"
+                app:drawableTint="?android:attr/textColorPrimary" />
 
             <TextView
                 android:id="@+id/tvDetailLocation"
@@ -95,8 +98,10 @@
                 android:layout_height="wrap_content"
                 android:drawablePadding="8dp"
                 android:layout_marginBottom="8dp"
+                android:textColor="?android:attr/textColorPrimary"
                 tools:text="Lokasi: Jakarta Convention Center"
-                app:drawableStartCompat="@drawable/ic_location" />
+                app:drawableStartCompat="@drawable/ic_location"
+                app:drawableTint="?android:attr/textColorPrimary" />
 
             <TextView
                 android:id="@+id/tvDetailCapacity"
@@ -104,8 +109,10 @@
                 android:layout_height="wrap_content"
                 android:drawablePadding="8dp"
                 android:layout_marginBottom="16dp"
+                android:textColor="?android:attr/textColorPrimary"
                 tools:text="Kapasitas: 100 orang"
-                app:drawableStartCompat="@drawable/ic_group" />
+                app:drawableStartCompat="@drawable/ic_group"
+                app:drawableTint="?android:attr/textColorPrimary" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -113,12 +120,14 @@
                 android:text="Deskripsi Event"
                 android:textSize="18sp"
                 android:textStyle="bold"
+                android:textColor="?android:attr/textColorPrimary"
                 android:layout_marginBottom="8dp"/>
 
             <TextView
                 android:id="@+id/tvDetailDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="?android:attr/textColorSecondary"
                 android:layout_marginBottom="16dp"
                 tools:text="Belajar Laravel dari dasar hingga mahir. Cocok untuk semua level developer." />
 
@@ -128,6 +137,7 @@
                 android:text="Waktu Pembuatan"
                 android:textSize="18sp"
                 android:textStyle="bold"
+                android:textColor="?android:attr/textColorPrimary"
                 android:layout_marginBottom="8dp"/>
 
             <TextView
@@ -135,6 +145,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
+                android:textColor="?android:attr/textColorSecondary"
                 tools:text="Dibuat: 2025-11-01 10:30:00" />
 
         </LinearLayout>
